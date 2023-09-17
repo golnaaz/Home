@@ -5,7 +5,7 @@ data class ItemDetailDomainModel(
     val city: String,
     val id: Int,
     val area: Int,
-    val url: String,
+    val url: String? = null,
     val price: Long,
     val professional: String,
     val propertyType: String,

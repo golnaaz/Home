@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Home</string>
+    <string name="professional">Professional:</string>
+    <string name="address">Address:</string>
+    <string name="rooms">Rooms:</string>
+    <string name="bedrooms">Bedrooms:</string>
+    <string name="area">area:</string>
 </resources>

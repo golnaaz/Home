@@ -1,14 +1,14 @@
 package com.golnaz.home.ui.model
 
 data class ItemUiModel(
-    val bedrooms: Int,
+    val bedrooms: String,
     val city: String,
     val id: Int,
-    val area: Int,
+    val area: String,
     val url: String,
-    val price: Long,
+    val priceValue: String,
     val professional: String,
     val propertyType: String,
     val offerType: Int,
-    val rooms: Int
+    val rooms: String
 )

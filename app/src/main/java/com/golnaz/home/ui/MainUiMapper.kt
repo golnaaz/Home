@@ -11,14 +11,14 @@ fun ArrayList<ItemDetailDomainModel>.toContent(): ArrayList<ItemUiModel> {
 }
 
 fun ItemDetailDomainModel.toContent(): ItemUiModel = ItemUiModel(
-    bedrooms = bedrooms,
+    bedrooms = bedrooms.toString(),
     city = city,
     id = id,
-    area = area,
-    url = url,
-    price = price,
+    area = area.toString(),
+    url = url ?: "",
+    priceValue = price.toString().plus("€"),
     professional = professional,
     propertyType = propertyType,
     offerType = offerType,
-    rooms = rooms,
+    rooms = rooms.toString(),
 )
