@@ -20,13 +20,25 @@ android {
         }
     }
 
+    testOptions {
+        unitTests.all {
+            it.useJUnitPlatform()
+        }
+        execution = "ANDROIDX_TEST_ORCHESTRATOR"
+        unitTests.isReturnDefaultValues = true
+    }
+
     buildTypes {
         release {
+            buildConfigField("String", "API_URL", "\"https://gsl-apps-technical-test.dignp.com/\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            buildConfigField("String", "API_URL", "\"https://gsl-apps-technical-test.dignp.com/\"")
         }
     }
     compileOptions {
@@ -51,19 +63,41 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-    implementation("androidx.activity:activity-compose:1.7.0")
-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation(libs.navigation)
+    implementation(libs.coroutines.android)
+    implementation(libs.coroutines.core)
+
+    implementation(libs.okhttp3)
+    implementation(libs.okhttp3.logging)
+    implementation(libs.retrofit2)
+    implementation(libs.retrofit2.gson)
+    implementation(libs.retrofit.adapter)
+
+    implementation(libs.koin.viewmodel)
+    implementation(libs.koin.scope)
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
+    implementation(libs.koin.core)
+    implementation(libs.koin.navigation)
+
+    implementation(libs.compose.ui)
+    implementation(libs.compose.livedata)
+    implementation(libs.compose.graphics)
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.activity)
+    implementation(libs.compose.material3)
+    implementation(libs.compose.preview)
+    implementation(libs.compose.viewModel)
+    implementation(libs.coil)
+
+    implementation(libs.android.xcore)
+    implementation(libs.lifecycle.runtime)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.junitJupiter)
+    testImplementation(libs.junitJupiterParams)
+    testImplementation(libs.coroutinesTest)
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotest)
+    testImplementation(libs.turbine)
 }

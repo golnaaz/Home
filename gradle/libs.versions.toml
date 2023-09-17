@@ -1,0 +1,61 @@
+[versions]
+navigation = '2.7.2'
+coroutines = '1.7.1'
+okhttp3 = '4.9.3'
+retrofit2 = '2.6.0'
+retrofit2_adapter = '0.9.2'
+koin_android = '2.0.1'
+koin = '3.4.3'
+compose_livedata = '1.5.1'
+compose_viewmodel = '2.7.0-alpha02'
+android_xcore = '1.12.0'
+lifecycle_runtime = '2.6.2'
+compose_activity = '1.7.2'
+compose = '2023.09.00'
+junit = '4.13.2'
+junitJupiter = '5.9.1'
+kotest = '5.5.4'
+coil = '2.0.0-rc01'
+mockk = '1.13.3'
+turbine = '0.12.1'
+
+[libraries]
+navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+
+coroutines_android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines_core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+
+okhttp3 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp3" }
+okhttp3_logging = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp3" }
+retrofit2 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit2" }
+retrofit2_gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit2" }
+retrofit_adapter = { module = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter", version.ref = "retrofit2_adapter" }
+
+koin_viewmodel = { module = "io.insert-koin:koin-android-viewmodel", version.ref = "koin_android" }
+koin_scope = { module = "io.insert-koin:koin-android-scope", version.ref = "koin_android" }
+koin_android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin_compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin_core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin_navigation = { module = "io.insert-koin:koin-androidx-navigation", version.ref = "koin" }
+
+android_xcore = { module = "androidx.core:core-ktx", version.ref = "android_xcore" }
+lifecycle_runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle_runtime" }
+
+compose_livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose_livedata" }
+compose_viewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "compose_viewmodel" }
+compose_activity = { module = "androidx.activity:activity-compose", version.ref = "compose_activity" }
+compose_bom = { module = "androidx.compose:compose-bom", version.ref = "compose" }
+compose_ui = { module = "androidx.compose.ui:ui"}
+compose_graphics = { module = "androidx.compose.ui:ui-graphics"}
+compose_preview = { module = "androidx.compose.ui:ui-tooling-preview"}
+compose_material3 = { module = "androidx.compose.material3:material3"}
+
+coil = { module = "io.coil-kt:coil-compose", version.ref = "coil"}
+
+junit = { module = "junit:junit",version.ref = "junit"}
+coroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+junitJupiter = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junitJupiter" }
+junitJupiterParams = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junitJupiter" }
+kotest = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
