@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.golnaz.home"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.golnaz.home"
@@ -26,6 +26,10 @@ android {
         }
         execution = "ANDROIDX_TEST_ORCHESTRATOR"
         unitTests.isReturnDefaultValues = true
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {
