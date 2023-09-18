@@ -9,3 +9,9 @@ Compose-
 Koin-
 Coroutine-
 Retrofit
+
+# Nex steps
+Support offline mode
+Support dark mode
+Support design system
+Cover with more tests
